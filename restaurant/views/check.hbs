@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Столики</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        //#main {            
+        //margin:0 25% 0 25%;
+        //width:50%;
+        //padding: 10px;
+        //border: 2px solid black;  /* Параметры рамки */
+        //}
+        h1, h2 {
+            text-align: center;
+        }
+        h1{
+            font-family: 'Bungee Shade', cursive;
+        }
+        #footer {
+        float:right;
+        }
+         body {  
+        background-color: #D2B48C;
+      }  
+      .jumbotron{
+        height: 90%;
+      }
+      #main_container {
+        height: 100%;
+      }
+    </style>
+</head>
+<body>
+  <div class="container" id="main_container">
+    <div class="jumbotron">
+      <h1><b>SEUL</b></h1>
+      <hr> 
+      <h2>
+      <a href="/"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span>На главную</button></a>
+      <a href="/reserve"><button type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Бронирование</button></a></h2>
+    <br /><br />
+    <form name="userForm" method="post">
+      <h4>&#128712 Чтобы посмотреть свободные места, выберете нужную для вас дату.</h4>
+        <input type="hidden" name="id" value="0" />
+        <div class="form-group">
+          <label for="date">Дата:</label>
+          <input class="form-control" required type="date"  max="2021.01.31" min="2021.01.01" name="date" />
+        </div>    <br />
+        <div class="text-right"> 
+        <button type="submit" name="booking" value="booking" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-search"></span> Посмотреть</button>
+      </div>
+    </form>
+    </div>
+     <div id="footer">{{> footer}}</div>
+  </div>
+</body>
+</html>

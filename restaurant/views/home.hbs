@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+  	<title>SEUL</title>
+  	 <meta name="viewport" content="width=device-width" />
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<style>
+	  	h1, h2, h3 {
+	    	text-align: center;
+	  	}
+	  	h1{
+	  		font-family: 'Bungee Shade', cursive;
+	  	}
+	 	h3{
+	  		font-family: 'EB Garamond', serif;
+	  	}
+	  	body {	 
+    		background-color: #D2B48C;
+      	}  
+	  	.jumbotron{
+    		height: 90%;
+	  	}
+	  	#footer {
+	  		float:right;
+	  	}
+	  	.pic {
+			text-align: center; /* Выравнивания картинки по центру в html */ 
+		}
+		#main_container {
+			height: 100%;
+		}
+  	</style>
+</head>
+<body>
+  	<div class="container" id="main_container">
+	    <div id="main" class="jumbotron">
+	      	<h1><b>SEUL</b></h1>
+	      	<hr>
+	      	<h2>
+	      	<a href="/about"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-search"></span>Описание</button></a>
+	     	<a href="/reserve"><button type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span>Бронирование</button></a>
+	    	<a href="/tables"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-info-sign"></span>Столики</button></a></h2>
+	      	<h3>Кафе корейской кухни
+			</h3>
+	      	<p class="pic"><img src="https://www.vesveter.ru/images/yuzhnaya_korea/eda_uzhnaya_korea.jpg" width="800px" height="440px"></p>
+	      	
+	    </div>
+		<div id="footer">{{> footer}}</div>
+	</div>
+</body>
+</html>

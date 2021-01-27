@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width" />
+  	<title>О нас</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  	<link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  	<style>
+	  h1, h2, h3, #button {
+	    text-align: center;
+	  }
+	  h1{
+	  	font-family: 'Bungee Shade', cursive;
+	  }
+	  #main{
+	  	font-family: 'EB Garamond', serif;
+	
+        min-height:100%;
+	  }
+	  body {	 
+    	background-color: #D2B48C;
+      }  
+      #about {
+      overflow: hidden;
+      }
+	  #one{
+	  	float:left;
+	  	width: 45%;
+	  	height: 40%;
+	  }
+	  #two {
+	  	float:left;
+	  	width: 55%;
+	  	height: 40%;
+        padding-left: 10%;
+	  }
+	  #contacts {
+ 	
+ 		text-align: center;
+ 		font-size: 15px;
+	  }
+	  #footer {
+	  	float:right;
+	  }
+	  .jumbotron{
+        height: 90%; 
+      }
+      #main_container {
+        height: 100%;
+      }
+  	</style>
+</head>
+<body>
+  	<div class="container" id="main_container">
+	    <div id="main" class="jumbotron">
+	      	<h1><b>SEUL</b></h1> <br />
+	      	<div id="button">
+	      	<a href="/"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span>На главную</button></a></div>
+	      	<hr>
+            <div id="about">
+	      	<div id="one">
+	      	Корея – одна из немногочисленных стран с древними кулинарными традициями, которые сохранились по сей день. Корейскую кухню по праву называют одной из самых полезных. Кухни соседних стран Северо-Восточной Азии в значительной степени отличаются от корейской.
+			</div>
+	      	<div id="two">
+	      	В корейской кухне есть свои исконные национальные блюда, такие как кимчхи (овощное острое блюдо из квашеной капусты или редьки), хве (блюдо из сырой рыбы: кусочки заливают уксусом, затем кладут перец, соль, чеснок, мелко нашинкованную морковь или редьку, через 20 минут блюдо подают к столу, куксу (лапша домашнего приготовления из пресного теста, ее подают к мясному или куриному бульону, в который для остроты добавляют перец, сою, кимчхи).
+			</div>
+            </div>
+	      	<div id="contacts">
+	      		<h2>Контакты<br /></h2>
+	      		Каждый день с 12:00 до 00:00<br /> +7 (982) 610-10-57 <br />
+	      		Адрес: Екатеринбург, улица 8 марта, д.8<br />
+	      		Электронный адрес: dir@seul-rest.com<br />     	   
+	      	</div>
+	    </div>
+		<div id="footer">{{> footer}}</div>
+	</div>
+</body>
+</html>

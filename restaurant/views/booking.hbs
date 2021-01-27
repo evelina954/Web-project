@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Бронирование</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        h1, h2 {
+            text-align: center;
+        }
+        h1{
+            font-family: 'Bungee Shade', cursive;
+        }
+        #footer {
+            float:right;
+        }
+        body {  
+            background-color: #D2B48C;
+        }  
+        .jumbotron{
+            height: 90%;
+        }
+        #main_container {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main_container">
+        <div class="jumbotron">
+            <h1><b>SEUL</b></h1>
+            
+            <hr>
+            <h2>
+            <a href="/"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span>На главную</button></a>
+            <a href="/tables"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-info-sign"></span>Столики</button></a></h2> <br />
+        
+        <form name="userForm" method="post">
+            <h4>&#128712 Мы работаем ежедневно. Часы, доступные для бронирования: 14:00, 18:00, 22:00.</h4><br />
+            <input type="hidden" name="id" value="0" />
+            <div class="form-group">
+                <label for="name">ФИО:</label>
+                <input class="form-control" required name="name" />
+            </div>
+            <div class="form-group">
+                <label for="phone">Телефон:</label>
+                <input class="form-control" required type="text" placeholder="+79555555555"
+                            pattern="\+7\d{3}\d{3}\d{2}\d{2}"name="phone" />
+            </div>
+            <div class="form-group">
+                <label for="email">Электронная почта:</label>
+                <input class="form-control" type="email" name="email" />
+            </div>
+            <div class="form-group">
+                <label for="date">Дата:</label>
+                <input class="form-control" required type="date"  max="2021-01-31" 
+                min="2021-01-01" name="date" />
+            </div>
+            <div class="form-group">
+                <label for="time">Время:</label>
+                <input class="form-control" required type="time" name="time" />
+            </div>
+            <div class="form-group">
+                <label for="table">Столик:</label>
+                <input class="form-control" required type="number" max="10" min="1" name="table" />
+            </div>
+            <br />
+            <div class="text-right">
+                <button type="submit" name="booking" value="booking" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-ok-sign"></span> Забронировать</button> 
+            </div>
+        </form>
+        </div>
+        <div id="footer">{{> footer}}</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Столики</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+      #one, #two, #three{
+        display: inline-block;
+        height: 50%;
+        width: 33.2%;
+        margin: -1px -1px 0 0;
+        vertical-align: top;
+        margin-right: -5px;
+      }
+      h3 {
+        font-size: 30px;
+        color: #6698ff;
+        text-align: center;
+      }
+      li {
+        font-size: 20px;
+        text-align: left;
+      }
+      body {
+        background-color: #D2B48C;
+      }
+      h1, h2 {
+        text-align: center;
+      }
+      h1{
+        font-family: 'Bungee Shade', cursive;
+      }
+      #footer {
+        float:right;
+      } 
+      .jumbotron{
+        height: 90%;
+      }
+      #main_container {
+        height: 100%;
+      }
+      #hours {
+        height: 100%;
+        border: 1px solid #6698ff;
+      }
+    </style>
+</head>
+<body >
+  <div class="container" id="main_container">
+    <div class="jumbotron">
+      <h1><b>SEUL</b></h1>      
+      <hr>
+      <h2><a href="/"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span>На главную</button></a>
+      <a href="/reserve"><button type="button" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span>Бронирование</button></a>
+      <a href="/tables"><button type="button" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-info-sign"></span>Столики</button></a></h2> <br />
+
+      <h2>В настоящий момент доступны для бронирования:</h2><br />
+     <div id="hours">
+        <div id="one">
+          <h3>{{hour1}}</h3>
+              <ul type="circle">
+                  {{#each result1}}
+                      <li>{{this}}</li>
+                  {{/each}}
+              </ul>
+        </div>
+        <div id="two">
+          <h3>{{hour2}}</h3>
+              <ul type="circle">
+                  {{#each result2}}
+                      <li>{{this}}</li>
+                  {{/each}}
+              </ul>
+        </div>
+        <div id="three">
+          <h3>{{hour3}}</h3>
+              <ul type="circle">
+                  {{#each result3}}
+                      <li>{{this}}</li>
+                  {{/each}}
+              </ul>
+        </div>
+      </div>
+      </div>
+    <div id="footer">{{> footer}}</div>
+  </div>
+</body>
+</html>
